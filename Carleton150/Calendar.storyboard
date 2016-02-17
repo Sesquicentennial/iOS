@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XOf-Hu-MR1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XOf-Hu-MR1">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -15,25 +15,200 @@
         </mutableArray>
         <mutableArray key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
+            <string>Roboto-Medium</string>
         </mutableArray>
         <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+            <string>Roboto-Regular</string>
             <string>Roboto-Regular</string>
             <string>Roboto-Regular</string>
             <string>Roboto-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Calendar View Controller-->
+        <!--Calendar Table View Controller-->
+        <scene sceneID="EjJ-hO-acU">
+            <objects>
+                <tableViewController id="NHL-bn-0Tb" customClass="CalendarTableViewController" customModule="Carleton150" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hQm-og-neD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="currentDate" selectionStyle="none" indentationWidth="10" reuseIdentifier="currentDate" id="yBw-oc-0Xh" customClass="currentDate" customModule="Carleton150" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yBw-oc-0Xh" id="qwd-yQ-jHe">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEV-FC-ugy">
+                                            <rect key="frame" x="279" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oEV-FC-ugy" firstAttribute="centerX" secondItem="qwd-yQ-jHe" secondAttribute="centerX" id="mbd-xx-ClG"/>
+                                        <constraint firstItem="oEV-FC-ugy" firstAttribute="centerY" secondItem="qwd-yQ-jHe" secondAttribute="centerY" id="zk8-4j-3Wy"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="date" destination="oEV-FC-ugy" id="Gya-Dq-iCh"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="datePicker" rowHeight="121" id="VzK-ZZ-SEA" customClass="datePicker" customModule="Carleton150" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="600" height="121"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VzK-ZZ-SEA" id="kwk-ub-xuF">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="A8V-hi-DUl">
+                                            <rect key="frame" x="0.0" y="-48" width="600" height="216"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="477350558.99570101">
+                                                <!--2016-02-16 21:22:38 +0000-->
+                                            </date>
+                                            <date key="minimumDate" timeIntervalSinceReferenceDate="477658800">
+                                                <!--2016-02-20 11:00:00 +0000-->
+                                            </date>
+                                            <connections>
+                                                <action selector="datePickerAction:" destination="NHL-bn-0Tb" eventType="valueChanged" id="qUY-MS-Qsv"/>
+                                                <action selector="datePickerAction:" destination="VzK-ZZ-SEA" eventType="valueChanged" id="tXL-n5-yXI"/>
+                                            </connections>
+                                        </datePicker>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="A8V-hi-DUl" firstAttribute="centerY" secondItem="kwk-ub-xuF" secondAttribute="centerY" id="70P-7N-uJX"/>
+                                        <constraint firstItem="A8V-hi-DUl" firstAttribute="leading" secondItem="kwk-ub-xuF" secondAttribute="leading" id="yZO-QR-llQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="A8V-hi-DUl" secondAttribute="trailing" id="zl3-8g-9x2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="datePicker" destination="A8V-hi-DUl" id="zBp-nK-PAS"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="collections" rowHeight="409" id="WSz-wf-awf" customClass="collections" customModule="Carleton150" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="257" width="600" height="409"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WSz-wf-awf" id="vTt-7P-X5S">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="408"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KyG-bQ-65b">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="485"/>
+                                            <collectionViewLayout key="collectionViewLayout" id="B5k-kL-xQy" customClass="CalendarLayout" customModule="Carleton150" customModuleProvider="target"/>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="CalendarCell" id="RyJ-3A-IsX" customClass="CalendarCell" customModule="Carleton150" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="186"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="186"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XpB-dV-vKu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="280"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="280" id="g7u-49-tub"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ini-sL-G6k">
+                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="186"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zb-tp-a4c">
+                                                                <rect key="frame" x="28" y="78" width="143" height="30"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDc-md-awJ">
+                                                                <rect key="frame" x="0.0" y="116" width="199" height="19"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="19" id="Ktn-Xl-af0"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2M-Jl-BUy">
+                                                                <rect key="frame" x="8" y="135" width="183" height="19"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstItem="9zb-tp-a4c" firstAttribute="top" secondItem="RyJ-3A-IsX" secondAttribute="topMargin" constant="70" id="0TY-oU-ixb"/>
+                                                        <constraint firstItem="Ini-sL-G6k" firstAttribute="centerX" secondItem="9zb-tp-a4c" secondAttribute="centerX" id="3VC-5z-Wvj"/>
+                                                        <constraint firstItem="XpB-dV-vKu" firstAttribute="leading" secondItem="RyJ-3A-IsX" secondAttribute="leading" id="C1I-76-VkJ"/>
+                                                        <constraint firstItem="9zb-tp-a4c" firstAttribute="leading" secondItem="RyJ-3A-IsX" secondAttribute="leading" constant="28" id="HFO-yJ-dLl"/>
+                                                        <constraint firstItem="Ini-sL-G6k" firstAttribute="centerY" secondItem="9zb-tp-a4c" secondAttribute="centerY" id="LNg-Ty-UkR"/>
+                                                        <constraint firstItem="Ini-sL-G6k" firstAttribute="top" secondItem="XpB-dV-vKu" secondAttribute="top" id="Noe-Lj-IHw"/>
+                                                        <constraint firstItem="Ini-sL-G6k" firstAttribute="leading" secondItem="RyJ-3A-IsX" secondAttribute="leading" id="O0N-7z-KHI"/>
+                                                        <constraint firstItem="Ini-sL-G6k" firstAttribute="top" secondItem="RyJ-3A-IsX" secondAttribute="top" id="Q6m-Hh-bb9"/>
+                                                        <constraint firstItem="Q2M-Jl-BUy" firstAttribute="top" secondItem="YDc-md-awJ" secondAttribute="bottom" id="QOZ-QY-7c1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9zb-tp-a4c" secondAttribute="trailing" constant="28" id="cDL-yw-LME"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="Q2M-Jl-BUy" secondAttribute="bottom" constant="24" id="f4m-ak-GuW"/>
+                                                        <constraint firstItem="Q2M-Jl-BUy" firstAttribute="leading" secondItem="RyJ-3A-IsX" secondAttribute="leadingMargin" id="gJl-k9-sLE"/>
+                                                        <constraint firstItem="YDc-md-awJ" firstAttribute="leading" secondItem="RyJ-3A-IsX" secondAttribute="leading" id="geI-6M-t1A"/>
+                                                        <constraint firstItem="9zb-tp-a4c" firstAttribute="centerY" secondItem="RyJ-3A-IsX" secondAttribute="centerY" id="lUy-ZI-cbn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="XpB-dV-vKu" secondAttribute="trailing" id="nIN-65-Of9"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="Q2M-Jl-BUy" secondAttribute="trailing" id="oRU-9t-Fbt"/>
+                                                        <constraint firstItem="YDc-md-awJ" firstAttribute="top" secondItem="9zb-tp-a4c" secondAttribute="bottom" constant="8" id="sgY-mq-aRb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YDc-md-awJ" secondAttribute="trailing" id="zvr-Um-V0f"/>
+                                                    </constraints>
+                                                    <size key="customSize" width="199" height="186"/>
+                                                    <connections>
+                                                        <outlet property="EventImageView" destination="XpB-dV-vKu" id="7E6-Ib-Q1R"/>
+                                                        <outlet property="eventTitle" destination="9zb-tp-a4c" id="Yjp-0h-6QW"/>
+                                                        <outlet property="imageCoverView" destination="Ini-sL-G6k" id="LWJ-w7-j1O"/>
+                                                        <outlet property="locationLabel" destination="YDc-md-awJ" id="AQn-7V-6O0"/>
+                                                        <outlet property="timeLabel" destination="Q2M-Jl-BUy" id="neE-OQ-Nhv"/>
+                                                        <segue destination="5C2-GG-GNa" kind="presentation" identifier="showCalendarDetail" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="Oun-jZ-bJr"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="KyG-bQ-65b" id="acd-8H-Hdf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NHL-bn-0Tb" id="8Xc-3x-UZ8"/>
+                            <outlet property="delegate" destination="NHL-bn-0Tb" id="suQ-R1-JwD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="dsT-N4-2xY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1QD-4I-l0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="-340"/>
+        </scene>
+        <!--Collection View Controller-->
         <scene sceneID="Sbk-9n-H9n">
             <objects>
-                <collectionViewController id="DiF-D4-Jp7" customClass="CalendarViewController" customModule="Carleton150" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="DiF-D4-Jp7" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SbU-JV-pey">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewLayout key="collectionViewLayout" id="VbH-pL-bbV" customClass="CalendarLayout" customModule="Carleton150" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="9gh-PA-oB9"/>
+                        <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OI6-um-Xc5">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarCell" id="alX-ZD-1AM" customClass="CalendarCell" customModule="Carleton150" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="199" height="186"/>
+                                <rect key="frame" x="0.0" y="0.0" width="199" height="186"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="199" height="186"/>
@@ -49,19 +224,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="199" height="186"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIr-Lz-Avv">
-                                            <rect key="frame" x="28" y="78" width="143" height="29.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIr-Lz-Avv">
+                                            <rect key="frame" x="28" y="78" width="143" height="30"/>
                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="0.95000000000000007" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spg-uT-lZH">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spg-uT-lZH">
                                             <rect key="frame" x="0.0" y="116" width="199" height="19"/>
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-dB-yYD">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-dB-yYD">
                                             <rect key="frame" x="8" y="135" width="183" height="19"/>
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -95,7 +270,6 @@
                                     <outlet property="imageCoverView" destination="1h0-x3-eaf" id="LR4-Lp-W2A"/>
                                     <outlet property="locationLabel" destination="spg-uT-lZH" id="J3Z-aL-BeV"/>
                                     <outlet property="timeLabel" destination="Vhk-dB-yYD" id="eUw-Jb-fXL"/>
-                                    <segue destination="5C2-GG-GNa" kind="presentation" identifier="showCalendarDetail" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="CdX-zB-XBr"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -123,7 +297,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="DiF-D4-Jp7" kind="relationship" relationship="rootViewController" id="sFW-XH-1s6"/>
+                        <segue destination="NHL-bn-0Tb" kind="relationship" relationship="rootViewController" id="foV-0N-DNR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch7-7s-gQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,7 +329,7 @@
                                             <action selector="dismissDetailView:" destination="5C2-GG-GNa" eventType="touchUpInside" id="7yu-Mm-2W5"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1UQ-p6-P1G">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1UQ-p6-P1G">
                                         <rect key="frame" x="14" y="176" width="526" height="350"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -168,13 +342,13 @@
                                         <color key="textColor" red="0.90216385690000001" green="0.62171052630000001" blue="0.073054933399999994" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GM2-zo-A7W">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GM2-zo-A7W">
                                         <rect key="frame" x="20" y="115" width="520" height="24"/>
                                         <fontDescription key="fontDescription" name="Roboto-Italic" family="Roboto" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ix-jQ-xny">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ix-jQ-xny">
                                         <rect key="frame" x="19" y="147" width="521" height="24"/>
                                         <fontDescription key="fontDescription" name="Roboto-Italic" family="Roboto" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>

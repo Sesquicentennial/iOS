@@ -20,6 +20,9 @@
 		6368A59A1C50523C00D6B5B2 /* QuestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6368A5991C50523C00D6B5B2 /* QuestCollectionViewController.swift */; };
 		6368A59E1C505B0600D6B5B2 /* QuestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6368A59D1C505B0600D6B5B2 /* QuestCollectionViewCell.swift */; };
 		6A3094401BD9CD4600A16342 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A30943F1BD9CD4600A16342 /* Geotification.swift */; };
+		6AD934391C73CB550094FC27 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD934381C73CB550094FC27 /* CalendarView.swift */; };
+		6AD9343B1C73CCC00094FC27 /* CalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD9343A1C73CCC00094FC27 /* CalendarTableViewController.swift */; };
+		6AD9343D1C73CFD30094FC27 /* CalendarTableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD9343C1C73CFD30094FC27 /* CalendarTableCells.swift */; };
 		71043C741C72FD970091D99A /* CalendarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71043C731C72FD970091D99A /* CalendarDetailView.swift */; };
 		710726FB1C58001F0071FABC /* CalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710726FA1C58001F0071FABC /* CalendarLayout.swift */; };
 		710726FD1C5813650071FABC /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710726FC1C5813650071FABC /* CalendarCell.swift */; };
@@ -77,6 +80,9 @@
 		6368A5991C50523C00D6B5B2 /* QuestCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestCollectionViewController.swift; sourceTree = "<group>"; };
 		6368A59D1C505B0600D6B5B2 /* QuestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestCollectionViewCell.swift; sourceTree = "<group>"; };
 		6A30943F1BD9CD4600A16342 /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
+		6AD934381C73CB550094FC27 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		6AD9343A1C73CCC00094FC27 /* CalendarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewController.swift; sourceTree = "<group>"; };
+		6AD9343C1C73CFD30094FC27 /* CalendarTableCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableCells.swift; sourceTree = "<group>"; };
 		71043C731C72FD970091D99A /* CalendarDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDetailView.swift; sourceTree = "<group>"; };
 		710726FA1C58001F0071FABC /* CalendarLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarLayout.swift; sourceTree = "<group>"; };
 		710726FC1C5813650071FABC /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
@@ -170,9 +176,12 @@
 			isa = PBXGroup;
 			children = (
 				63036B371C4CB80000193A78 /* Calendar.storyboard */,
+				6AD9343C1C73CFD30094FC27 /* CalendarTableCells.swift */,
 				71043C731C72FD970091D99A /* CalendarDetailView.swift */,
 				71340E5B1C5217C3007F9E2F /* CalendarDataService.swift */,
 				714DB8721C57DC6300770A44 /* CalendarViewController.swift */,
+				6AD934381C73CB550094FC27 /* CalendarView.swift */,
+				6AD9343A1C73CCC00094FC27 /* CalendarTableViewController.swift */,
 				710726FA1C58001F0071FABC /* CalendarLayout.swift */,
 				710726FC1C5813650071FABC /* CalendarCell.swift */,
 			);
@@ -371,6 +380,7 @@
 				TargetAttributes = {
 					71294DA91BC6FC1500B9F81B = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = XY779MKP22;
 					};
 					71294DC81BC6FC1500B9F81B = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -489,6 +499,8 @@
 				711704131BF3EB9E00566464 /* utils.swift in Sources */,
 				714DB8731C57DC6300770A44 /* CalendarViewController.swift in Sources */,
 				71340E5A1C5216C8007F9E2F /* HistoricalDataService.swift in Sources */,
+				6AD9343B1C73CCC00094FC27 /* CalendarTableViewController.swift in Sources */,
+				6AD9343D1C73CFD30094FC27 /* CalendarTableCells.swift in Sources */,
 				63291F361C5971A30064C296 /* TimelineViewController.swift in Sources */,
 				6357E6F21C4ED3BC00A28D00 /* HistoricalViewController.swift in Sources */,
 				6357E6F31C4ED3BC00A28D00 /* (null) in Sources */,
@@ -499,6 +511,7 @@
 				6368A59E1C505B0600D6B5B2 /* QuestCollectionViewCell.swift in Sources */,
 				71340E5C1C5217C3007F9E2F /* CalendarDataService.swift in Sources */,
 				715AE4801C4EB08D00C8F0C9 /* Quest.swift in Sources */,
+				6AD934391C73CB550094FC27 /* CalendarView.swift in Sources */,
 				715AE47E1C4EADF200C8F0C9 /* WayPoint.swift in Sources */,
 				71340E581C5214A2007F9E2F /* QuestDataService.swift in Sources */,
 				714C58B01C5ABF1600D6C33E /* Endpoints.swift in Sources */,
@@ -674,11 +687,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = Carleton150/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.carleton.carleton150.Carleton150;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carleton150/Carleton150-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -690,11 +706,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = Carleton150/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.carleton.carleton150.Carleton150;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Carleton150/Carleton150-Bridging-Header.h";
 			};
 			name = Release;
