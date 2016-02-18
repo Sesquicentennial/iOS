@@ -32,6 +32,7 @@ class CalendarTableViewController: UITableViewController {
         // set the title
         // set a default row height
         tableView.estimatedRowHeight = 500.0
+        tableView.registerClass(collections.self, forCellReuseIdentifier: "collections")
         // stop the navigation bar from covering the calendar content
         self.navigationController!.navigationBar.translucent = false;
         
@@ -65,22 +66,20 @@ class CalendarTableViewController: UITableViewController {
         print("dequeueuing")
         if indexPath.section == 0{
             let cell: currentDate = tableView.dequeueReusableCellWithIdentifier("currentDate", forIndexPath: indexPath) as! currentDate
-            //cell.date.text = "today"
             
-            print("the first cell")
             return cell
         }
         else if indexPath.section == 1{
             
             let cell: datePicker = tableView.dequeueReusableCellWithIdentifier("datePicker", forIndexPath: indexPath) as! datePicker
-            print("the second cell")
+            
             return cell
             
 
         }
         else{
             let cell: collections = tableView.dequeueReusableCellWithIdentifier("collections", forIndexPath: indexPath) as! collections
-            print("the third cell")
+            cell.backgroundColor = UIColor(red: 252, green: 212, blue: 80, alpha: 1.0)
             
             
             
@@ -104,7 +103,7 @@ class CalendarTableViewController: UITableViewController {
                 return 100.0
             }
             else{
-                return 1000.0
+                return 50.0
             }
         }
     }

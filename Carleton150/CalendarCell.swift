@@ -9,28 +9,28 @@ class CalendarCell: UICollectionViewCell {
     /**
         The background view for the calendar cell
      */
-    @IBOutlet weak var EventImageView: UIImageView!
+    @IBOutlet var EventImageView: UIImageView!
     
     /**
         The view providing a darkening filter as the 
         cell goes out of focus.
      */
-    @IBOutlet weak var imageCoverView: UIView!
+    @IBOutlet var imageCoverView: UIView!
     
     /**
         The title of the event.
      */
-    @IBOutlet weak var eventTitle: UILabel!
+    @IBOutlet var eventTitle: UILabel!
     
     /**
         The location of the event.
      */
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
     
     /**
         The starting time of the event.
      */
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
    
     /**
         Sets the EventImageView to reflect the image
@@ -57,20 +57,20 @@ class CalendarCell: UICollectionViewCell {
         // the continuous animated transition.
         let standardHeight = CalendarLayoutConstants.Cell.standardHeight
         let featuredHeight = CalendarLayoutConstants.Cell.featuredHeight
-        
+        eventTitle.text = "v"
         let delta = 1 - ((featuredHeight - CGRectGetHeight(frame)) / (featuredHeight - standardHeight))
-       
+        print(delta)
         // Set the amount of fade for the darkening view on top of each cell.
         let minAlpha: CGFloat = 0.3
         let maxAlpha: CGFloat = 0.65
-        imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
-       
-        // Scale the title as the cell scales
-        let scale = max(delta, 0.75)
-        eventTitle.transform = CGAffineTransformMakeScale(scale, scale)
-       
-        // Set time and location to fade in as the cell scales
-        locationLabel.alpha = delta
-        timeLabel.alpha = delta
+//        imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
+//       
+//        // Scale the title as the cell scales
+//        let scale = max(delta, 0.75)
+//        eventTitle.transform = CGAffineTransformMakeScale(scale, scale)
+//       
+//        // Set time and location to fade in as the cell scales
+//        locationLabel.alpha = delta
+//        timeLabel.alpha = delta
     }
 }

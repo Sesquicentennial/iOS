@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XOf-Hu-MR1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XOf-Hu-MR1">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -15,11 +15,8 @@
         </mutableArray>
         <mutableArray key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
-            <string>Roboto-Medium</string>
         </mutableArray>
         <mutableArray key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
-            <string>Roboto-Regular</string>
             <string>Roboto-Regular</string>
             <string>Roboto-Regular</string>
             <string>Roboto-Regular</string>
@@ -100,7 +97,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="485"/>
                                             <collectionViewLayout key="collectionViewLayout" id="B5k-kL-xQy" customClass="CalendarLayout" customModule="Carleton150" customModuleProvider="target"/>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="CalendarCell" id="RyJ-3A-IsX" customClass="CalendarCell" customModule="Carleton150" customModuleProvider="target">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CalendarCell" reuseIdentifier="CalendarCell" id="RyJ-3A-IsX" customClass="CalendarCell" customModule="Carleton150" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="199" height="186"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -163,11 +160,11 @@
                                                     </constraints>
                                                     <size key="customSize" width="199" height="186"/>
                                                     <connections>
-                                                        <outlet property="EventImageView" destination="XpB-dV-vKu" id="7E6-Ib-Q1R"/>
-                                                        <outlet property="eventTitle" destination="9zb-tp-a4c" id="Yjp-0h-6QW"/>
-                                                        <outlet property="imageCoverView" destination="Ini-sL-G6k" id="LWJ-w7-j1O"/>
-                                                        <outlet property="locationLabel" destination="YDc-md-awJ" id="AQn-7V-6O0"/>
-                                                        <outlet property="timeLabel" destination="Q2M-Jl-BUy" id="neE-OQ-Nhv"/>
+                                                        <outlet property="EventImageView" destination="XpB-dV-vKu" id="TQy-bK-LUu"/>
+                                                        <outlet property="eventTitle" destination="9zb-tp-a4c" id="BLD-LR-rfV"/>
+                                                        <outlet property="imageCoverView" destination="Ini-sL-G6k" id="Lyh-g2-1Ts"/>
+                                                        <outlet property="locationLabel" destination="YDc-md-awJ" id="p56-Za-c9z"/>
+                                                        <outlet property="timeLabel" destination="Q2M-Jl-BUy" id="S77-EM-ZN4"/>
                                                         <segue destination="5C2-GG-GNa" kind="presentation" identifier="showCalendarDetail" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="Oun-jZ-bJr"/>
                                                     </connections>
                                                 </collectionViewCell>
@@ -176,7 +173,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="collectionView" destination="KyG-bQ-65b" id="acd-8H-Hdf"/>
+                                    <outlet property="collectionView" destination="KyG-bQ-65b" id="DW1-U9-mI3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -189,100 +186,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1QD-4I-l0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="-340"/>
-        </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="Sbk-9n-H9n">
-            <objects>
-                <collectionViewController id="DiF-D4-Jp7" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SbU-JV-pey">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewLayout key="collectionViewLayout" id="9gh-PA-oB9"/>
-                        <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OI6-um-Xc5">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarCell" id="alX-ZD-1AM" customClass="CalendarCell" customModule="Carleton150" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="199" height="186"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="199" height="186"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GHp-bb-oFv">
-                                            <rect key="frame" x="0.0" y="0.0" width="199" height="280"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="280" id="XLd-JS-Y6I"/>
-                                            </constraints>
-                                        </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1h0-x3-eaf">
-                                            <rect key="frame" x="0.0" y="0.0" width="199" height="186"/>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIr-Lz-Avv">
-                                            <rect key="frame" x="28" y="78" width="143" height="30"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.95000000000000007" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spg-uT-lZH">
-                                            <rect key="frame" x="0.0" y="116" width="199" height="19"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-dB-yYD">
-                                            <rect key="frame" x="8" y="135" width="183" height="19"/>
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstItem="1h0-x3-eaf" firstAttribute="centerY" secondItem="zIr-Lz-Avv" secondAttribute="centerY" id="1oe-UV-5vb"/>
-                                    <constraint firstItem="spg-uT-lZH" firstAttribute="top" secondItem="zIr-Lz-Avv" secondAttribute="bottom" constant="8" id="2Yf-Vz-cLL"/>
-                                    <constraint firstItem="Vhk-dB-yYD" firstAttribute="leading" secondItem="alX-ZD-1AM" secondAttribute="leadingMargin" id="9eF-Lg-6Eh"/>
-                                    <constraint firstItem="1h0-x3-eaf" firstAttribute="top" secondItem="GHp-bb-oFv" secondAttribute="top" id="9mo-YG-9nq"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Vhk-dB-yYD" secondAttribute="trailing" id="ABa-mH-wBk"/>
-                                    <constraint firstItem="1h0-x3-eaf" firstAttribute="leading" secondItem="alX-ZD-1AM" secondAttribute="leading" id="Dif-Z4-mGp"/>
-                                    <constraint firstAttribute="trailing" secondItem="zIr-Lz-Avv" secondAttribute="trailing" constant="28" id="ISR-gQ-YQY"/>
-                                    <constraint firstItem="spg-uT-lZH" firstAttribute="leading" secondItem="alX-ZD-1AM" secondAttribute="leading" id="LIf-lx-Kh9"/>
-                                    <constraint firstItem="1h0-x3-eaf" firstAttribute="top" secondItem="alX-ZD-1AM" secondAttribute="top" id="Qpk-zv-sAh"/>
-                                    <constraint firstItem="zIr-Lz-Avv" firstAttribute="leading" secondItem="alX-ZD-1AM" secondAttribute="leading" constant="28" id="V8x-wI-QBD"/>
-                                    <constraint firstItem="GHp-bb-oFv" firstAttribute="leading" secondItem="alX-ZD-1AM" secondAttribute="leading" id="aaX-V5-tuR"/>
-                                    <constraint firstAttribute="trailing" secondItem="GHp-bb-oFv" secondAttribute="trailing" id="hb6-FM-iir"/>
-                                    <constraint firstItem="1h0-x3-eaf" firstAttribute="centerX" secondItem="zIr-Lz-Avv" secondAttribute="centerX" id="htm-6Z-bGq"/>
-                                    <constraint firstAttribute="trailing" secondItem="spg-uT-lZH" secondAttribute="trailing" id="kkf-dC-l9u"/>
-                                    <constraint firstItem="Vhk-dB-yYD" firstAttribute="top" secondItem="spg-uT-lZH" secondAttribute="bottom" id="nyu-kd-fT8"/>
-                                    <constraint firstItem="zIr-Lz-Avv" firstAttribute="centerY" secondItem="alX-ZD-1AM" secondAttribute="centerY" id="zrB-ix-E1w"/>
-                                </constraints>
-                                <size key="customSize" width="199" height="186"/>
-                                <connections>
-                                    <outlet property="EventImageView" destination="GHp-bb-oFv" id="svp-bw-URu"/>
-                                    <outlet property="eventTitle" destination="zIr-Lz-Avv" id="obM-z4-b8N"/>
-                                    <outlet property="imageCoverView" destination="1h0-x3-eaf" id="LR4-Lp-W2A"/>
-                                    <outlet property="locationLabel" destination="spg-uT-lZH" id="J3Z-aL-BeV"/>
-                                    <outlet property="timeLabel" destination="Vhk-dB-yYD" id="eUw-Jb-fXL"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="DiF-D4-Jp7" id="nQt-u4-gkr"/>
-                            <outlet property="delegate" destination="DiF-D4-Jp7" id="HZR-00-V18"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" id="YpE-WW-IoP"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hyl-yd-H64" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="770" y="490"/>
+            <point key="canvasLocation" x="719" y="490"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="dS2-dH-Wvz">
@@ -336,7 +240,7 @@
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eventTitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="KhU-MR-imR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="eventTitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="KhU-MR-imR">
                                         <rect key="frame" x="19" y="72" width="521" height="28"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
                                         <color key="textColor" red="0.90216385690000001" green="0.62171052630000001" blue="0.073054933399999994" alpha="1" colorSpace="calibratedRGB"/>

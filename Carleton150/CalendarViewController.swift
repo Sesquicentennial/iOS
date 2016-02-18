@@ -76,21 +76,8 @@
 //        return eventImages
 //    }
 //    
-////    func registerClass(_ viewClass: AnyClass?,
-////        forSupplementaryViewOfKind elementKind: String,
-////        withReuseIdentifier identifier: String)
-//    
-//    
-////    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-////        var reusableView : UICollectionReusableView? = nil
-////        if(kind == UICollectionElementKindSectionHeader){
-////            let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "DateCell", forIndexPath: indexPath) as! DateCell
-////            
-////            headerView.Date.text = "today"
-////            reusableView = headerView
-////        }
-////        return reusableView!
-////    }
+
+
 //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 //        return CGSize(width: self.view.frame.width, height: 90) // The size of one cell
 //    }

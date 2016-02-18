@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 var curDate: String!
 
 class currentDate: UITableViewCell{
@@ -25,6 +26,7 @@ class datePicker: UITableViewCell{
         datePickerChanged()
     }
     func datePickerChanged(){
+        print("date pick")
         curDate = NSDateFormatter.localizedStringFromDate(datePicker.date, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
     }
 }
@@ -32,28 +34,35 @@ class datePicker: UITableViewCell{
 class collections:UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate
 {
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet var collectionView: UICollectionView!
     
     var calendar: [Dictionary<String, String>] = []
     var cells: [CalendarCell] = []
     var eventImages: [UIImage] = []
     var tableLimit : Int!
-  
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        //view.backgroundColor = UIColor(red: 252, green: 212, blue: 80, alpha: 1.0)
+        //let layout = UICollectionViewFlowLayout()
+        //layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        let layout = CalendarLayout()
+        //
+        self.collectionView?.setCollectionViewLayout(layout,
+            animated: true)
+
+        collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
+       
         self.collectionView.backgroundColor = UIColor(red: 224, green: 224, blue: 224, alpha: 1.0)
         
-        // set the deceleration rate for the event cell snap
-        self.collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
-
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "CalendarCell")
        
-        
-        self.contentView.addSubview(collectionView)
+
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.registerClass(CalendarCell.self, forCellWithReuseIdentifier: "CalendarCell")
+        self.collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
+        print("init")
+        actOnCalendarUpdate()
+        self.addSubview(collectionView)
     }
     
     required init?(coder decoder : NSCoder) {
@@ -79,10 +88,12 @@ class collections:UITableViewCell,UICollectionViewDataSource, UICollectionViewDe
                 eventImages.append(eventImage)
             }
         }
+        print("image")
         return eventImages
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        print("sizeforitematindexpath")
         return CGSize(width: collectionView.frame.width, height: 90) // The size of one cell
     }
     
@@ -97,7 +108,7 @@ class collections:UITableViewCell,UICollectionViewDataSource, UICollectionViewDe
      - Parameters:
      - notification: The notification triggered from the CalendarDataService.
      */
-    func actOnCalendarUpdate(notification: NSNotification) {
+    func actOnCalendarUpdate() {
         if let calendar = CalendarDataService.schedule {
             print("received notification")
             
@@ -116,6 +127,7 @@ class collections:UITableViewCell,UICollectionViewDataSource, UICollectionViewDe
      - collectionView: The collection view being used for the calendar.
      */
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        
         return 1
     }
     
@@ -128,6 +140,7 @@ class collections:UITableViewCell,UICollectionViewDataSource, UICollectionViewDe
      - numberOfItemsInSection: The number of items in the calendar.
      */
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(calendar.count)
         return calendar.count
     }
     
@@ -142,9 +155,10 @@ class collections:UITableViewCell,UICollectionViewDataSource, UICollectionViewDe
      - indexPath:      The index of the cell that was clicked.
      */
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        print("a")
         let layout = UICollectionViewFlowLayout() as! CalendarLayout
 //        
-        collectionView.collectionViewLayout = layout
+        //collectionView.collectionViewLayout = layout
         let offset = layout.dragOffset * CGFloat(indexPath.item)
         if collectionView.contentOffset.y != offset {
             collectionView.setContentOffset(CGPoint(x: 0, y: offset), animated: true)
@@ -163,6 +177,7 @@ class collections:UITableViewCell,UICollectionViewDataSource, UICollectionViewDe
      - Returns: A built calendar cell.
      */
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        print("b")
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CalendarCell", forIndexPath: indexPath) as! CalendarCell
         let images = getEventImages()
         let eventText = calendar[indexPath.item]["title"]
@@ -171,6 +186,7 @@ class collections:UITableViewCell,UICollectionViewDataSource, UICollectionViewDe
         cell.locationLabel.text = calendar[indexPath.item]["location"]!
         cell.timeLabel.text = calendar[indexPath.item]["startTime"]!
         cell.eventDescription = calendar[indexPath.item]["description"]!
+        print("cell")
         return cell
     }
 }
