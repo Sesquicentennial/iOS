@@ -87,4 +87,27 @@ final class Utils {
         currentController.navigationController!.navigationBar.translucent = false;
     }
     
+    class func filterCalendarData(calendar: [Dictionary<String, String>], chosenDate: String) -> [Dictionary<String, String>] {
+        var specificDay: [Dictionary<String, String>] = []
+        for i in 0 ..< calendar.count{
+            let curDay = String(calendar[i]["startTime"])
+            let date = curDay.substringWithRange(Range<String.Index>(start: curDay.startIndex.advancedBy(14), end: curDay.startIndex.advancedBy(16)))
+            let month = curDay.substringWithRange(Range<String.Index>(start: curDay.startIndex.advancedBy(10), end: curDay.startIndex.advancedBy(13)))
+            let year = curDay.substringWithRange(Range<String.Index>(start: curDay.startIndex.advancedBy(18), end: curDay.startIndex.advancedBy(22)))
+            let chosendate = chosenDate.substringWithRange(Range<String.Index>(start: chosenDate.startIndex.advancedBy(7), end: chosenDate.startIndex.advancedBy(9)))
+            let chosenMonth = chosenDate.substringWithRange(Range<String.Index>(start: chosenDate.startIndex.advancedBy(4), end: chosenDate.startIndex.advancedBy(7)))
+            let chosenYear = chosenDate.substringWithRange(Range<String.Index>(start: chosenDate.startIndex.advancedBy(0), end: chosenDate.startIndex.advancedBy(4)))
+          
+            if date == chosendate && month == chosenMonth && year == chosenYear {
+                
+                specificDay.append(calendar[i])
+                
+            }
+            
+        }
+        
+        return specificDay
+            
+    }
+    
 }

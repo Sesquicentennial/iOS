@@ -11,7 +11,7 @@ class CalendarViewController: UICollectionViewController {
     var cells: [CalendarCell] = []
     var eventImages: [UIImage] = []
     var tableLimit : Int!
-   
+    var chosenDate : String!  //the variable for the current date, with format yyyymmmdd, mmm is in letters such as Feb.
     /**
         Initializes this view and sets up the 
         observer for the calendar data.
@@ -81,9 +81,12 @@ class CalendarViewController: UICollectionViewController {
      */
     func actOnCalendarUpdate(notification: NSNotification) {
         if let calendar = CalendarDataService.schedule {
+            chosenDate = "2016Feb20"
+            self.calendar = Utils.filterCalendarData(calendar, chosenDate: chosenDate)
+            
             print("received notification")
             
-            self.calendar = calendar
+            //self.calendar = calendar
             let indexPath = NSIndexPath(forItem: 0, inSection: 0)
             let _ = CalendarDetailView()
             let _ = self.collectionView!
