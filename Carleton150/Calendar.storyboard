@@ -169,6 +169,10 @@
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="WSz-wf-awf" id="QPP-Pe-Y4k"/>
+                                                <outlet property="delegate" destination="WSz-wf-awf" id="Ms9-BB-I2L"/>
+                                            </connections>
                                         </collectionView>
                                     </subviews>
                                 </tableViewCellContentView>

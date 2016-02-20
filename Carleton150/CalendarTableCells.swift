@@ -58,7 +58,7 @@ class collections:UITableViewCell,UICollectionViewDataSource, UICollectionViewDe
 
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        self.collectionView.registerClass(CalendarCell.self, forCellWithReuseIdentifier: "CalendarCell")
+        //self.collectionView.registerClass(CalendarCell.self, forCellWithReuseIdentifier: "CalendarCell")
         self.collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
         print("init")
         actOnCalendarUpdate()
