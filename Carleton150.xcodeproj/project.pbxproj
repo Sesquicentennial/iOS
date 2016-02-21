@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3C7C651B588C8C78CEBC3E38 /* Pods_Carleton150.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39FEB0FEB30D513E7B3C1CDA /* Pods_Carleton150.framework */; };
+		4ACC1E8F1C794EDA00ED6541 /* CollectionAndBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC1E8E1C794EDA00ED6541 /* CollectionAndBarVC.swift */; };
+		4ACC1E911C797DF800ED6541 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC1E901C797DF800ED6541 /* DatePickerVC.swift */; };
 		63036B341C4CB5A200193A78 /* Historical.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63036B321C4CB5A200193A78 /* Historical.storyboard */; };
 		63036B381C4CB80000193A78 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63036B371C4CB80000193A78 /* Calendar.storyboard */; };
 		630B0B4F1C7446D000876031 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B0B4E1C7446D000876031 /* QuestViewController.swift */; };
@@ -70,6 +72,8 @@
 		39FEB0FEB30D513E7B3C1CDA /* Pods_Carleton150.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carleton150.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBAB4B9CF8E6ECBB08983E6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		44F4A8948584594D31E6D696 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4ACC1E8E1C794EDA00ED6541 /* CollectionAndBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionAndBarVC.swift; sourceTree = "<group>"; };
+		4ACC1E901C797DF800ED6541 /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		4EF7FF35B1F532FC92A7B8A3 /* Pods-Carleton150Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carleton150Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carleton150Tests/Pods-Carleton150Tests.release.xcconfig"; sourceTree = "<group>"; };
 		63036B331C4CB5A200193A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Historical.storyboard; sourceTree = "<group>"; };
 		63036B371C4CB80000193A78 /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 			children = (
 				63036B371C4CB80000193A78 /* Calendar.storyboard */,
 				71043C731C72FD970091D99A /* CalendarDetailView.swift */,
+				4ACC1E901C797DF800ED6541 /* DatePickerVC.swift */,
+				4ACC1E8E1C794EDA00ED6541 /* CollectionAndBarVC.swift */,
 				71340E5B1C5217C3007F9E2F /* CalendarDataService.swift */,
 				714DB8721C57DC6300770A44 /* CalendarViewController.swift */,
 				710726FA1C58001F0071FABC /* CalendarLayout.swift */,
@@ -499,6 +505,7 @@
 			files = (
 				63F5E9A01C72B60D00CFCB38 /* QuestPlayingViewController.swift in Sources */,
 				711704131BF3EB9E00566464 /* utils.swift in Sources */,
+				4ACC1E8F1C794EDA00ED6541 /* CollectionAndBarVC.swift in Sources */,
 				714DB8731C57DC6300770A44 /* CalendarViewController.swift in Sources */,
 				71340E5A1C5216C8007F9E2F /* HistoricalDataService.swift in Sources */,
 				63291F361C5971A30064C296 /* TimelineViewController.swift in Sources */,
@@ -517,6 +524,7 @@
 				715AE4801C4EB08D00C8F0C9 /* Quest.swift in Sources */,
 				63A99A6D1C763AEA007E6F25 /* WaypointsModalViewController.swift in Sources */,
 				630B0B511C744A8700876031 /* QuestContentViewController.swift in Sources */,
+				4ACC1E911C797DF800ED6541 /* DatePickerVC.swift in Sources */,
 				715AE47E1C4EADF200C8F0C9 /* WayPoint.swift in Sources */,
 				71340E581C5214A2007F9E2F /* QuestDataService.swift in Sources */,
 				714C58B01C5ABF1600D6C33E /* Endpoints.swift in Sources */,

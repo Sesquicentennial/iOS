@@ -11,6 +11,7 @@ class CalendarViewController: UICollectionViewController {
     var cells: [CalendarCell] = []
     var eventImages: [UIImage] = []
     var tableLimit : Int!
+    var parentView: UIViewController!
    
     /**
         Initializes this view and sets up the 
@@ -30,16 +31,17 @@ class CalendarViewController: UICollectionViewController {
         collection cells for the calendar.
      */
     override func viewDidLoad() {
+        print("Collection loaded")
         super.viewDidLoad()
         
         // set the current table limit
         self.tableLimit = calendar.count
         
         // set properties on the navigation bar 
-        Utils.setUpNavigationBar(self)
+//        Utils.setUpNavigationBar(self)
        
         // stop the navigation bar from covering the calendar content
-        self.navigationController!.navigationBar.translucent = false;
+        //self.navigationController!.navigationBar.translucent = false;
 
         // set the view's background colors
         view.backgroundColor = UIColor(red: 252, green: 212, blue: 80, alpha: 1.0)
